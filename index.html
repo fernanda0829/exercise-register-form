@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register Form</title>
+    <title>Formulário de Registro</title>
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,23 +23,181 @@
       <div class="content-flex">
         <div class="content-info">
           <div class="content-member">
-            <p class="text">Allready a member?</p>
+            <p class="text">Já é membro?</p>
             <i class="fa-solid fa-user"></i>
           </div>
           <div class="content-text">
-            <h1 class="content-text-tittle">Input your information</h1>
+            <h1 class="content-text-tittle">Insira suas informações</h1>
             <p class="content-text-desc">
-              We need you to help us with some basic information for your
-              account creation. Here are our <a>terms and conditins.</a> Please
-              read them carefully. We are GDRP compliiant
+              Precisamos que você nos ajude com algumas informações básicas para
+              a criação da sua conta. Aqui estão nossos
+              <a>termos e condições</a>. Por favor, leia-os cuidadosamente.
+              Estamos em conformidade com o GDPR
             </p>
           </div>
           <div class="line"></div>
         </div>
-        <div class="content-background">
-          <div class="content-img">
-            <img src="assets/png/register-img.png" alt="" />
-          </div>
+        <div class="register">
+          <form action="">
+            <fieldset class="company">
+              <div class="field">
+                <div class="label">
+                  <label for="first-name">Primeiro Nome</label>
+                  <a><i class="fa-solid fa-circle-question"></i></a>
+                </div>
+                <div class="input">
+                  <input
+                    required
+                    placeholder="John"
+                    type="text"
+                    name=""
+                    id="first-name"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <div class="label">
+                  <label for="last-name">Sobrenome</label>
+                  <a><i class="fa-solid fa-circle-question"></i></a>
+                </div>
+                <div class="input">
+                  <input
+                    required
+                    placeholder="Smith"
+                    type="text"
+                    name=""
+                    id="last-name"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <div class="label">
+                  <label for="company">Empresa</label>
+                  <a><i class="fa-solid fa-circle-question"></i></a>
+                </div>
+                <div class="input">
+                  <input
+                    required
+                    placeholder="Company Name"
+                    type="text"
+                    name=""
+                    id="company"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <div class="label">
+                  <label for="email">Email</label>
+                  <a><i class="fa-solid fa-circle-question"></i></a>
+                </div>
+                <div class="input">
+                  <input
+                    required
+                    placeholder="contact@email.com"
+                    type="email"
+                    name=""
+                    id="email"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <div class="label">
+                  <label for="number-employees"
+                    >Número de Colaboradores <span>(opcional)</span></label
+                  >
+                  <a><i class="fa-solid fa-circle-question"></i></a>
+                </div>
+                <div class="input">
+                  <input
+                    value="0-20"
+                    required
+                    type="radio"
+                    name=""
+                    id="number-employees"
+                  />
+                  <input
+                    required
+                    value="20-50"
+                    type="radio"
+                    name=""
+                    id="number-employees"
+                  />
+                  <input
+                    required
+                    type="radio"
+                    value="50-100"
+                    name=""
+                    id="number-employees"
+                  />
+                  <input
+                    required
+                    value="100-..."
+                    type="radio"
+                    name=""
+                    id="number-employees"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <div class="label">
+                  <label for="phone-number"
+                    >Número de Telefone <span>(opcional)</span></label
+                  >
+                  <a><i class="fa-solid fa-circle-question"></i></a>
+                </div>
+                <div class="input">
+                  <input
+                    placeholder="+000"
+                    required
+                    type="number"
+                    name=""
+                    id="ddd-number"
+                  />
+                  <input
+                    required
+                    placeholder="00 000 000"
+                    type="text"
+                    name=""
+                    id="phone-number"
+                  />
+                </div>
+              </div>
+            </fieldset>
+            <div class="line"></div>
+
+            <fieldset class="password">
+              <div class="field">
+                <div class="label">
+                  <label for="password">Senha</label>
+                  <a><i class="fa-solid fa-circle-question"></i></a>
+                </div>
+                <div class="input">
+                  <input required type="password" name="" id="password" />
+                </div>
+              </div>
+              <div class="field">
+                <div class="label">
+                  <label for="password-confirm">Confirmar Senha</label>
+                  <a><i class="fa-solid fa-circle-question"></i></a>
+                </div>
+                <div class="input">
+                  <input
+                    required
+                    type="password"
+                    name=""
+                    id="password-confirm"
+                  />
+                </div>
+              </div>
+            </fieldset>
+            <div class="line"></div>
+            <fieldset>
+              <input type="checkbox" name="" id="check" />
+              <label for="check">I agree with terms and conditins.</label>
+
+              <button>Registrar-se</button>
+            </fieldset>
+          </form>
         </div>
       </div>
     </main>

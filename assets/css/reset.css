@@ -26,3 +26,16 @@ a {
   cursor: pointer;
   color: #000;
 }
+
+input,
+label,
+select,
+fieldset,
+button,
+textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background: none;
+  display: inline-block;
+}

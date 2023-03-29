@@ -2,20 +2,26 @@
   font-family: "Roboto", sans-serif;
 }
 
+#content {
+  background-color: #f9faff;
+}
+
 #content .content-flex {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
 #content .content-info {
-  width: 858px;
+  padding: 85px 100px 0;
+  background-color: #fff;
+  max-width: 850px;
 }
 
 #content .content-info .content-member {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 #content .content-info .content-member .text {
@@ -33,9 +39,9 @@
 
 #content .content-info .content-text {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 85px 100px;
+  margin-bottom: 50px;
 }
 
 #content .content-info .content-text .content-text-tittle {
@@ -44,12 +50,11 @@
   font-weight: 700;
   color: #42505c;
   max-width: 369px;
-  margin-right: 60px;
 }
 
 #content .content-info .content-text .content-text-desc {
   font-size: 14px;
-  color: ##404040;
+  color: #404040;
   line-height: 28px;
   letter-spacing: 0.25px;
   max-width: 300px;
@@ -63,12 +68,93 @@
   color: #4743e0;
 }
 
-#content .content-info .line {
-  width: 645px;
+#content .line {
+  width: 830px;
   border: 1px dashed rgba(0, 0, 0, 0.2);
-  margin-top: 50px;
+  margin: 0 auto;
 }
 
-#content .content-background {
-  background-color: #f9faff;
+#content .register {
+  padding: 45px 100px;
+  background-color: #fff;
+  max-width: 850px;
+}
+
+#content .register form {
+  display: flex;
+  flex-direction: column;
+}
+
+#content .register form .company,
+.password {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#content .register form .company .label,
+.password .label {
+  font-size: 12px;
+  line-height: 28px;
+  letter-spacing: 0.25px;
+  color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+#content .register form .company .label i,
+.password .label i {
+  font-size: 16px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+#content .register form .company input,
+.password input {
+  width: 380px;
+  height: 50px;
+  border: 1px solid #d1d1d1;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.25px;
+}
+
+#content .register form .company input::placeholder,
+.password input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#content .register form .company .input #ddd-number {
+  width: 98px;
+  height: 50px;
+  border: 1px solid #d1d1d1;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.25px;
+}
+
+#content .register form .company .input #phone-number {
+  width: 280px;
+  height: 50px;
+  border: 1px solid #d1d1d1;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.25px;
+}
+
+#content .register form .company .label span {
+  color: rgba(51, 51, 51, 0.34);
 }
