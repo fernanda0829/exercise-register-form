@@ -283,3 +283,9 @@
   box-shadow: 0 0 20px rgba(71, 67, 224, 0.5);
   transition: 0.7s;
 }
+
+#content .content-img {
+  position: absolute;
+  right: 0;
+  top: 325px;
+}
