@@ -22,10 +22,10 @@
     <main id="content">
       <div class="content-flex">
         <div class="content-info">
-          <div class="content-member">
+          <a class="content-member">
             <p class="text">Já é membro?</p>
             <i class="fa-solid fa-user"></i>
-          </div>
+          </a>
           <div class="content-text">
             <h1 class="content-text-tittle">Insira suas informações</h1>
             <p class="content-text-desc">
@@ -43,7 +43,7 @@
               <div class="field">
                 <div class="label">
                   <label for="first-name">Primeiro Nome</label>
-                  <a><i class="fa-solid fa-circle-question"></i></a>
+                  <button><i class="fa-solid fa-circle-question"></i></button>
                 </div>
                 <div class="input">
                   <input
@@ -58,7 +58,7 @@
               <div class="field">
                 <div class="label">
                   <label for="last-name">Sobrenome</label>
-                  <a><i class="fa-solid fa-circle-question"></i></a>
+                  <button><i class="fa-solid fa-circle-question"></i></button>
                 </div>
                 <div class="input">
                   <input
@@ -73,7 +73,7 @@
               <div class="field">
                 <div class="label">
                   <label for="company">Empresa</label>
-                  <a><i class="fa-solid fa-circle-question"></i></a>
+                  <button><i class="fa-solid fa-circle-question"></i></button>
                 </div>
                 <div class="input">
                   <input
@@ -88,7 +88,7 @@
               <div class="field">
                 <div class="label">
                   <label for="email">Email</label>
-                  <a><i class="fa-solid fa-circle-question"></i></a>
+                  <button><i class="fa-solid fa-circle-question"></i></button>
                 </div>
                 <div class="input">
                   <input
@@ -105,37 +105,15 @@
                   <label for="number-employees"
                     >Número de Colaboradores <span>(opcional)</span></label
                   >
-                  <a><i class="fa-solid fa-circle-question"></i></a>
+                  <button><i class="fa-solid fa-circle-question"></i></button>
                 </div>
-                <div class="input">
-                  <input
-                    value="0-20"
-                    required
-                    type="radio"
-                    name=""
-                    id="number-employees"
-                  />
-                  <input
-                    required
-                    value="20-50"
-                    type="radio"
-                    name=""
-                    id="number-employees"
-                  />
-                  <input
-                    required
-                    type="radio"
-                    value="50-100"
-                    name=""
-                    id="number-employees"
-                  />
-                  <input
-                    required
-                    value="100-..."
-                    type="radio"
-                    name=""
-                    id="number-employees"
-                  />
+                <div class="number-options">
+                  <label class="option" for="number-employees">0<20</label>
+                  <label class="option" for="number-employees">20<50</label>
+                  <label class="option active" for="number-employees"
+                    >50<100</label
+                  >
+                  <label class="option" for="number-employees">100<...</label>
                 </div>
               </div>
               <div class="field">
@@ -143,16 +121,17 @@
                   <label for="phone-number"
                     >Número de Telefone <span>(opcional)</span></label
                   >
-                  <a><i class="fa-solid fa-circle-question"></i></a>
+                  <button><i class="fa-solid fa-circle-question"></i></button>
                 </div>
-                <div class="input">
-                  <input
-                    placeholder="+000"
-                    required
-                    type="number"
-                    name=""
-                    id="ddd-number"
-                  />
+                <div class="input flex">
+                  <select class="ddd-number">
+                    <option class="placeholder" value="+ddd">+000</option>
+                    <option value="+ddd">+34</option>
+                    <option value="+ddd">+33</option>
+                    <option value="+ddd">+55</option>
+                    <option value="+ddd">+45</option>
+                  </select>
+
                   <input
                     required
                     placeholder="00 000 000"
@@ -164,12 +143,11 @@
               </div>
             </fieldset>
             <div class="line"></div>
-
             <fieldset class="password">
               <div class="field">
                 <div class="label">
                   <label for="password">Senha</label>
-                  <a><i class="fa-solid fa-circle-question"></i></a>
+                  <button><i class="fa-solid fa-circle-question"></i></button>
                 </div>
                 <div class="input">
                   <input required type="password" name="" id="password" />
@@ -178,7 +156,7 @@
               <div class="field">
                 <div class="label">
                   <label for="password-confirm">Confirmar Senha</label>
-                  <a><i class="fa-solid fa-circle-question"></i></a>
+                  <button><i class="fa-solid fa-circle-question"></i></button>
                 </div>
                 <div class="input">
                   <input
@@ -191,11 +169,15 @@
               </div>
             </fieldset>
             <div class="line"></div>
-            <fieldset>
-              <input type="checkbox" name="" id="check" />
-              <label for="check">I agree with terms and conditins.</label>
-
-              <button>Registrar-se</button>
+            <fieldset class="checkbox">
+              <div class="check-select">
+                <input type="checkbox" name="check" id="check" />
+                <span class="checkmark"></span>
+                <label for="check">
+                  Eu concordo com os <a>termos e condições</a>.
+                </label>
+              </div>
+              <button class="register-btn">Registrar-se</button>
             </fieldset>
           </form>
         </div>

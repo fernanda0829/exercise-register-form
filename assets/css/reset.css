@@ -21,7 +21,9 @@ p {
   padding: 0;
 }
 
-a {
+a,
+button,
+select {
   text-decoration: none;
   cursor: pointer;
   color: #000;
@@ -38,4 +40,5 @@ textarea {
   padding: 0;
   background: none;
   display: inline-block;
+  border-radius: 0;
 }

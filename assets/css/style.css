@@ -15,6 +15,7 @@
   padding: 85px 100px 0;
   background-color: #fff;
   max-width: 850px;
+  box-sizing: border-box;
 }
 
 #content .content-info .content-member {
@@ -52,7 +53,8 @@
   max-width: 369px;
 }
 
-#content .content-info .content-text .content-text-desc {
+#content .content-info .content-text .content-text-desc,
+#content .register .checkbox .check-select label {
   font-size: 14px;
   color: #404040;
   line-height: 28px;
@@ -60,7 +62,8 @@
   max-width: 300px;
 }
 
-#content .content-info .content-text .content-text-desc a {
+#content .content-info .content-text .content-text-desc a,
+#content .register .checkbox .check-select label a {
   font-size: 14px;
   line-height: 28px;
   font-weight: 700;
@@ -69,7 +72,7 @@
 }
 
 #content .line {
-  width: 830px;
+  width: 645px;
   border: 1px dashed rgba(0, 0, 0, 0.2);
   margin: 0 auto;
 }
@@ -78,6 +81,7 @@
   padding: 45px 100px;
   background-color: #fff;
   max-width: 850px;
+  box-sizing: border-box;
 }
 
 #content .register form {
@@ -86,7 +90,7 @@
 }
 
 #content .register form .company,
-.password {
+#content .register form .password {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -115,7 +119,7 @@
 
 #content .register form .company input,
 .password input {
-  width: 380px;
+  width: 300px;
   height: 50px;
   border: 1px solid #d1d1d1;
   padding: 15px;
@@ -131,20 +135,53 @@
   color: rgba(0, 0, 0, 0.4);
 }
 
-#content .register form .company .input #ddd-number {
-  width: 98px;
+#content .register form .input.flex {
+  display: flex;
+}
+
+#content .register form .input.flex {
+  display: flex;
+}
+
+#content .register form .field .number-options {
+  margin-bottom: 30px;
+}
+
+#content .register form .field .number-options .option {
+  width: 70px;
   height: 50px;
   border: 1px solid #d1d1d1;
-  padding: 15px;
+  text-align: center;
+  padding: 10px;
   box-sizing: border-box;
-  margin-bottom: 30px;
   font-size: 14px;
   line-height: 28px;
   letter-spacing: 0.25px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#content .register form .field .number-options .active {
+  color: #4743e0;
+  border: 1px solid #4743e0;
+  box-shadow: 0 0 14px rgba(71, 67, 224, 0.2);
+}
+
+#content .register form .company .input .ddd-number {
+  width: 85px;
+  height: 50px;
+  border: 1px solid #d1d1d1;
+  padding: 15px;
+  margin-bottom: 30px;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.25px;
+  border-right: 0;
 }
 
 #content .register form .company .input #phone-number {
-  width: 280px;
+  width: 215px;
   height: 50px;
   border: 1px solid #d1d1d1;
   padding: 15px;
@@ -157,4 +194,92 @@
 
 #content .register form .company .label span {
   color: rgba(51, 51, 51, 0.34);
+}
+
+#content .register form .password {
+  padding: 40px 0;
+}
+
+#content .register .checkbox {
+  padding: 45px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#content .register .checkbox .check-select {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+/* escondendo o checkbox */
+#content .register .checkbox .check-select input {
+  position: relative;
+  opacity: 0;
+  height: 24px;
+  width: 24px;
+  z-index: 1;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* estilizando o checkbox novo */
+#content .register .checkbox .check-select .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  box-sizing: border-box;
+}
+
+/* Style the checkmark/indicator */
+#content .register .checkbox .check-select .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 8px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Show the checkmark when checked */
+#content .register .checkbox .check-select input:checked ~ .checkmark:after {
+  display: block;
+}
+
+#content .register .checkbox .check-select label {
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+#content .register .checkbox .check-select input:checked ~ .checkmark {
+  background-color: #4743e0;
+}
+
+#content .register .checkbox .register-btn {
+  width: 120px;
+  height: 50px;
+  background-color: #4743e0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.25px;
+  padding: 10px;
+}
+
+#content .register .checkbox .register-btn:hover {
+  box-shadow: 0 0 20px rgba(71, 67, 224, 0.5);
+  transition: 0.7s;
 }
